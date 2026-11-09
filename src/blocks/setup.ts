@@ -36,8 +36,8 @@ const blockStyles: Record<string, ReturnType<typeof style>> = {
 };
 for (const cat of Object.keys(C) as Category[]) blockStyles[`${cat}_blocks`] = style(C[cat]);
 
-export const THEME = Blockly.Theme.defineTheme('matrixblock', {
-  name: 'matrixblock',
+export const THEME = Blockly.Theme.defineTheme('matrixcube', {
+  name: 'matrixcube',
   base: Blockly.Themes.Classic,
   blockStyles,
   categoryStyles: Object.fromEntries(

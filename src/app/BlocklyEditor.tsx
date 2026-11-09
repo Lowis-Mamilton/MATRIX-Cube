@@ -73,7 +73,7 @@ export function BlocklyEditor({ mode, lang, initial, onChange, onHistory, ref }:
     try {
       Blockly.serialization.workspaces.load(state.current as object, workspace);
     } catch (e) {
-      console.error('[MATRIXblock] could not load blocks', e);
+      console.error('[MATRIX Cube] could not load blocks', e);
     } finally {
       Blockly.Events.enable();
     }

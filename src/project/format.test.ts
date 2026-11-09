@@ -7,7 +7,7 @@ describe('project file format', () => {
     expect(parseProject(JSON.stringify(p))).toEqual(p);
   });
 
-  it('rejects files that are not MATRIXblock projects', () => {
+  it('rejects files that are not MATRIX Cube projects', () => {
     expect(() => parseProject('hello')).toThrow();
     expect(() => parseProject('{"format":"other"}')).toThrow();
     expect(() => parseProject(JSON.stringify({ ...newProject('x', 'icon'), version: 99 }))).toThrow();

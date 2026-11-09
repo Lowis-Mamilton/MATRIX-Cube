@@ -5,7 +5,7 @@ import { EXPRESSION_TYPES, STATEMENT_TYPES, TRIGGER_TYPES } from '../ir/compile'
 const ourBlocks = [...STATEMENT_TYPES, ...EXPRESSION_TYPES, ...TRIGGER_TYPES].filter((t) => /^[iw]_/.test(t));
 
 describe('strings', () => {
-  it.each(Object.keys(STRINGS))('%s has a tooltip for every MATRIXblock block', (lang) => {
+  it.each(Object.keys(STRINGS))('%s has a tooltip for every MATRIX Cube block', (lang) => {
     const blocks = STRINGS[lang as keyof typeof STRINGS].blocks as Record<string, string>;
     const missing = ourBlocks.filter((t) => !blocks[`MB_TIP_${t.toUpperCase()}`]);
     expect(missing).toEqual([]);

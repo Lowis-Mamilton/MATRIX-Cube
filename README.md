@@ -1,4 +1,4 @@
-# MATRIXblock New Generation
+# MATRIX Cube
 
 A web-based graphical programming environment (PWA) for the **MATRIX Mini R4** robot controller, with two block styles:
 
@@ -7,7 +7,7 @@ A web-based graphical programming environment (PWA) for the **MATRIX Mini R4** r
 
 Programs run live from the browser: on a built-in simulator, or on a real R4 connected over Bluetooth.
 
-**Live app:** https://lowis-mamilton.github.io/MATRIXblock-New-Generation/
+**Live app:** https://lowis-mamilton.github.io/MATRIX-Cube/
 
 ## Documentation
 

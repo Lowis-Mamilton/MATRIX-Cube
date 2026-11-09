@@ -98,7 +98,7 @@ export class Runtime {
 
     void this.execBlock(thread.body, ctrl.signal)
       .catch((e) => {
-        if (!(e instanceof Stopped)) console.error('[MATRIXblock runtime]', e);
+        if (!(e instanceof Stopped)) console.error('[MATRIX Cube runtime]', e);
       })
       .finally(() => {
         this.abort.signal.removeEventListener('abort', onProgramAbort);

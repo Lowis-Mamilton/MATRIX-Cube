@@ -43,7 +43,7 @@ export function parseProject(text: string): ProjectFile {
     throw new Error('not JSON');
   }
   const p = data as Partial<ProjectFile>;
-  if (!p || typeof p !== 'object' || p.format !== FILE_FORMAT) throw new Error('not a MATRIXblock project');
+  if (!p || typeof p !== 'object' || p.format !== FILE_FORMAT) throw new Error('not a MATRIX Cube project');
   if (typeof p.version !== 'number' || p.version > FILE_VERSION) throw new Error('made by a newer version');
   if (p.mode !== 'icon' && p.mode !== 'word') throw new Error('unknown block mode');
   if (!p.workspace || typeof p.workspace !== 'object') throw new Error('missing blocks');

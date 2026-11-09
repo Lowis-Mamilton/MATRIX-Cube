@@ -1,7 +1,7 @@
 /*
- * MATRIXblock Link — tethered-mode firmware for the MATRIX Mini R4.
+ * MATRIX Cube Link — tethered-mode firmware for the MATRIX Mini R4.
  *
- * The MATRIXblock web app drives the board live over BLE: it sends commands
+ * The MATRIX Cube web app drives the board live over BLE: it sends commands
  * (motors, servos, LEDs, buzzer) and this sketch streams sensor telemetry back.
  * Protocol: docs/adr/0003-ble-protocol.md (Nordic UART Service, <= 20-byte
  * frames `[type][seq][payload...]`, little-endian).
@@ -225,7 +225,7 @@ void onRx(BLEDevice, BLECharacteristic c) {
 }
 
 void onConnect(BLEDevice central) {
-  Serial.print(F("[MatrixblockLink] connected: "));
+  Serial.print(F("[MatrixCubeLink] connected: "));
   Serial.println(central.address());
   connected = true;
   lastRxMs = millis();
@@ -243,7 +243,7 @@ void onConnect(BLEDevice central) {
 }
 
 void onDisconnect(BLEDevice) {
-  Serial.println(F("[MatrixblockLink] disconnected"));
+  Serial.println(F("[MatrixCubeLink] disconnected"));
   connected = false;
   haltAll();
   ultrasonicMask = 0;
@@ -519,12 +519,12 @@ void sendIo() {
 void setup() {
   // Diagnostics on the USB serial port (115200 baud); harmless when nobody listens.
   Serial.begin(115200);
-  Serial.println(F("[MatrixblockLink] starting"));
+  Serial.println(F("[MatrixCubeLink] starting"));
   MiniR4.begin();
-  Serial.println(F("[MatrixblockLink] MiniR4 ready"));
+  Serial.println(F("[MatrixCubeLink] MiniR4 ready"));
 
   if (!BLE.begin()) {
-    Serial.println(F("[MatrixblockLink] BLE.begin() failed"));
+    Serial.println(F("[MatrixCubeLink] BLE.begin() failed"));
     boardName = "BLE ERROR";
     showStatus("Update the WiFi/BLE bridge");
     while (true) delay(1000);
@@ -548,7 +548,7 @@ void setup() {
 
   scanPorts();
   showStatus("Waiting for app...");
-  Serial.print(F("[MatrixblockLink] advertising as "));
+  Serial.print(F("[MatrixCubeLink] advertising as "));
   Serial.println(boardName);
   for (uint8_t i = 0; i < 4; i++) {
     Serial.print(F("  I2C"));
@@ -566,7 +566,7 @@ void loop() {
 
   if (connected && !watchdogTripped && now - lastRxMs > WATCHDOG_MS) {
     // The app went quiet (radio trouble, tab closed): stop before the robot runs away.
-    Serial.println(F("[MatrixblockLink] watchdog: app silent, stopping"));
+    Serial.println(F("[MatrixCubeLink] watchdog: app silent, stopping"));
     haltAll();
     watchdogTripped = true;
   }

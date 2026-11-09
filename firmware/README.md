@@ -1,6 +1,6 @@
-# MatrixblockLink firmware
+# MatrixCubeLink firmware
 
-Firmware that lets the MATRIXblock web app drive a MATRIX Mini R4 live over Bluetooth (tethered mode). Protocol: [ADR 0003](../docs/adr/0003-ble-protocol.md).
+Firmware that lets the MATRIX Cube web app drive a MATRIX Mini R4 live over Bluetooth (tethered mode). Protocol: [ADR 0003](../docs/adr/0003-ble-protocol.md).
 
 ## First-time setup of a new board (once per board)
 
@@ -14,9 +14,9 @@ Firmware that lets the MATRIXblock web app drive a MATRIX Mini R4 live over Blue
 ### 2. Check the lower (STM32) firmware is 6.0 or later
 If the OLED shows `Firmware Outdated!` at power-on, update the lower firmware first with the previous MATRIXblock app (**File → Firmware Update**).
 
-### 3. Flash MatrixblockLink
+### 3. Flash MatrixCubeLink
 1. Connect the board over USB and switch the battery on.
-2. Open `firmware/MatrixblockLink/MatrixblockLink.ino` in Arduino IDE.
+2. Open `firmware/MatrixCubeLink/MatrixCubeLink.ino` in Arduino IDE.
 3. Board: **Arduino UNO R4 WiFi**; Port: the board's COM port.
 4. Click **Upload**.
 
@@ -27,21 +27,21 @@ The ESP32 bridge firmware that provides Bluetooth is too old. In Arduino IDE cho
 
 ### 5. Connect
 1. Turn on the computer's Bluetooth (Windows: Settings → Bluetooth & devices).
-2. Open MATRIXblock in **Chrome or Edge** and click **Connect** (top right).
+2. Open MATRIX Cube in **Chrome or Edge** and click **Connect** (top right).
 3. Pick the board's name in the list and click **Pair**.
 4. Both LEDs blink green twice and the OLED shows `Connected`.
 
 There is no need to pair the board in Windows settings; everything happens in the browser.
 
-**iPad / iPhone:** Safari and Chrome on iOS cannot use Bluetooth. Install the free **Bluefy** browser from the App Store and open MATRIXblock in it. In Bluefy, **Save** opens a dialog: use Share → Save to Files (or copy the text), and load the file later with **Open**.
+**iPad / iPhone:** Safari and Chrome on iOS cannot use Bluetooth. Install the free **Bluefy** browser from the App Store and open MATRIX Cube in it. In Bluefy, **Save** opens a dialog: use Share → Save to Files (or copy the text), and load the file later with **Open**.
 
 ## Flashing with arduino-cli (handy for many boards)
 
 ```bash
 arduino-cli core install arduino:renesas_uno
 arduino-cli lib install MatrixMiniR4 ArduinoBLE
-arduino-cli compile --fqbn arduino:renesas_uno:unor4wifi firmware/MatrixblockLink
-arduino-cli upload  --fqbn arduino:renesas_uno:unor4wifi -p COM5 firmware/MatrixblockLink
+arduino-cli compile --fqbn arduino:renesas_uno:unor4wifi firmware/MatrixCubeLink
+arduino-cli upload  --fqbn arduino:renesas_uno:unor4wifi -p COM5 firmware/MatrixCubeLink
 ```
 
 Replace `COM5` with the board's port (`arduino-cli board list`).
@@ -60,7 +60,7 @@ Replace `COM5` with the board's port (`arduino-cli board list`).
 - The app sends a heartbeat every 300 ms (and whenever telemetry arrives); after 2.5 s without any frame the board stops every motor.
 
 ## Changing the protocol
-Change `PROTOCOL_VERSION` in both `MatrixblockLink.ino` and `src/devices/ble/protocol.ts`. The app refuses boards with a different version and asks for a firmware update.
+Change `PROTOCOL_VERSION` in both `MatrixCubeLink.ino` and `src/devices/ble/protocol.ts`. The app refuses boards with a different version and asks for a firmware update.
 
 ## Hardware test tools (`tools/`)
 

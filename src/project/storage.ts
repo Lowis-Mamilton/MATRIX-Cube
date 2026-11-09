@@ -50,7 +50,7 @@ export async function exportProject(p: ProjectFile): Promise<ExportResult> {
         case 'picker': {
           const handle = await picker!({
             suggestedName: name,
-            types: [{ description: 'MATRIXblock', accept: { 'application/json': [FILE_EXTENSION] } }],
+            types: [{ description: 'MATRIX Cube', accept: { 'application/json': [FILE_EXTENSION] } }],
           });
           const w = await handle.createWritable();
           await w.write(new Blob([text], { type: 'application/json' }));

@@ -15,8 +15,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['logo-white.png'],
       manifest: {
-        name: 'MATRIXblock',
-        short_name: 'MATRIXblock',
+        name: 'MATRIX Cube',
+        short_name: 'MATRIX Cube',
         description: 'MATRIX Mini R4 graphical programming',
         lang: 'zh-Hant',
         theme_color: '#2E5690',

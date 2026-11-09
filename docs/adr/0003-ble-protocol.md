@@ -71,7 +71,7 @@ The old MATRIXblock already used the Nordic UART Service (NUS).
   - Chrome throttles timers in background or occluded tabs to about once a second. On real hardware this tripped a 1 s watchdog every 2–3 s, so the web app also sends a heartbeat whenever telemetry arrives and its last frame is ≥ 300 ms old (Bluetooth events are not throttled).
 
 ### Versioning
-- `PROTOCOL_VERSION = 2`, defined in both `firmware/MatrixblockLink/MatrixblockLink.ino` and `src/devices/ble/protocol.ts`. The app sends HELLO on connect; if INFO reports a different protocol it disconnects and asks for a firmware update.
+- `PROTOCOL_VERSION = 2`, defined in both `firmware/MatrixCubeLink/MatrixCubeLink.ino` and `src/devices/ble/protocol.ts`. The app sends HELLO on connect; if INFO reports a different protocol it disconnects and asks for a firmware update.
 
 ### Hardware findings
 - With STM32 firmware 6.00, `GetButtonsState` (both buttons at once) always fails, and its timeouts corrupted the reads after it. The firmware reads each button with `GetButtonState`.

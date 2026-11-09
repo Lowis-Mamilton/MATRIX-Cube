@@ -1,4 +1,4 @@
-# MATRIXblock New Generation — Specification
+# MATRIX Cube — Specification
 
 A new graphical programming environment for the **MATRIX Mini R4** robot controller. It follows the two block styles of LEGO Education's Coding Canvas — horizontal **Icon blocks** and vertical **Word blocks** — and offers a deliberately small, EV3-G-like set of blocks rather than the whole hardware library.
 
@@ -19,7 +19,7 @@ It is a ground-up rewrite. The previous MATRIXblock (Electron, blocks → Arduin
 | Look | MATRIX brand palette and logo, own SVG icons. Layout inspired by LEGO, not copied |
 | Brand colours | Primary `#2E5690`, logo `#195197`, accent `#6EC9EF`, secondary `#97ABC8`, light `#CBD5E3`, ink `#1D1D36`, light background `#F2F1FF`. Fonts: Montserrat + Noto Sans TC |
 | Connection | BLE only (Web Bluetooth) |
-| Hosting | GitHub Pages, personal account `Lowis-Mamilton`, repo `MATRIXblock-New-Generation` (https://lowis-mamilton.github.io/MATRIXblock-New-Generation/); to be merged into the company website later |
+| Hosting | GitHub Pages, personal account `Lowis-Mamilton`, repo `MATRIX-Cube` (https://lowis-mamilton.github.io/MATRIX-Cube/); to be merged into the company website later |
 
 ## Blocks
 

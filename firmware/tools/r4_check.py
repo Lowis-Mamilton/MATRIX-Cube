@@ -1,4 +1,4 @@
-"""Hardware check for the MatrixblockLink firmware, run from a PC over BLE.
+"""Hardware check for the MatrixCubeLink firmware, run from a PC over BLE.
 
 Exercises the same protocol the web app uses: handshake, telemetry, LED,
 buzzer, a degree move on a motor with an encoder, the timeout guard on a port

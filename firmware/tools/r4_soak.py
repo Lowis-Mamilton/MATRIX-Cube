@@ -1,4 +1,4 @@
-"""Stability soak test for the MatrixblockLink firmware.
+"""Stability soak test for the MatrixCubeLink firmware.
 
 Connects over BLE like the web app (HELLO, heartbeat every 300 ms) and watches
 telemetry while the board's USB serial log is captured alongside. Fails (RED)

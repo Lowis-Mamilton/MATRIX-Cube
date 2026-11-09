@@ -12,7 +12,7 @@ export type Lang = (typeof LANGUAGES)[number]['code'];
 
 const zhTW = {
   ui: {
-    appName: 'MATRIXblock',
+    appName: 'MATRIX Cube',
     untitled: '未命名專案',
     new: '新增',
     open: '開啟',
@@ -77,7 +77,7 @@ const zhTW = {
     disconnect: '中斷連線',
     connectHint: '用藍牙連接 MATRIX Mini R4',
     noBluetooth: '這個瀏覽器不支援藍牙，請改用 Chrome 或 Edge。',
-    noBluetoothIOS: 'iPad / iPhone 的 Safari 和 Chrome 都不支援藍牙連線。請到 App Store 下載免費的「Bluefy」瀏覽器，用它開啟 MATRIXblock 再連線。',
+    noBluetoothIOS: 'iPad / iPhone 的 Safari 和 Chrome 都不支援藍牙連線。請到 App Store 下載免費的「Bluefy」瀏覽器，用它開啟 MATRIX Cube 再連線。',
     exportTitle: '儲存專案',
     exportHint: '這個瀏覽器無法直接存檔。請按「分享」→「儲存到檔案」，或複製下面的內容另外保存；之後用「開啟」選擇存好的檔案就能載入（檔名建議 {{name}}）。',
     copy: '複製內容',
@@ -253,7 +253,7 @@ type Strings = typeof zhTW;
 
 const en: Strings = {
   ui: {
-    appName: 'MATRIXblock',
+    appName: 'MATRIX Cube',
     untitled: 'Untitled project',
     new: 'New',
     open: 'Open',
@@ -318,7 +318,7 @@ const en: Strings = {
     disconnect: 'Disconnect',
     connectHint: 'Connect a MATRIX Mini R4 over Bluetooth',
     noBluetooth: 'This browser has no Bluetooth support. Use Chrome or Edge.',
-    noBluetoothIOS: 'Safari and Chrome on iPad / iPhone cannot connect over Bluetooth. Install the free “Bluefy” browser from the App Store and open MATRIXblock in it.',
+    noBluetoothIOS: 'Safari and Chrome on iPad / iPhone cannot connect over Bluetooth. Install the free “Bluefy” browser from the App Store and open MATRIX Cube in it.',
     exportTitle: 'Save project',
     exportHint: 'This browser cannot save files directly. Tap Share → Save to Files, or copy the text below and keep it; later choose the saved file with Open to load it (suggested name: {{name}}).',
     copy: 'Copy',
